@@ -1,4 +1,6 @@
 const Zoomg = window.Zoomg;
+console.log(`++++ window = ${window}`);
+console.log(`++++ window.Zoomg = ${window.Zoomg}`);
 const Quad = Zoomg.Quad;
 const svgEle = Zoomg.svgElement;
 const Config = Zoomg.Config;
