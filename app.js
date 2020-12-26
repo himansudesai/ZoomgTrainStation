@@ -1,12 +1,16 @@
+import { add } from './modules/square.js';
+import Atom from './modules/atom.js';
+import Engine from './modules/engine.js';
+
+const sum = add(2, 3);
+console.log(`++++ sum = ${sum}`);
+
 const Zoomg = window.Zoomg;
-console.log(`++++ window = ${window}`);
-console.log(`++++ window.Zoomg = ${window.Zoomg}`);
-const Quad = Zoomg.Quad;
 const svgEle = Zoomg.svgElement;
 const Config = Zoomg.Config;
 const ViewStack = Zoomg.ViewStack;
-const Atom = Zoomg.Atom;
-const Engine = Zoomg.Engine;
+// const Atom = Zoomg.Atom;
+// const Engine = Zoomg.Engine;
 const Rectangle = Zoomg.Rectangle;
 
 const scrolly = document.getElementById("scroll");
@@ -14,7 +18,6 @@ svgEle.initialize("#group", "scroll", "#scroll svg");
 
 
 const context = new Rectangle("top-context", 0, 0, null, 0, 0);
-(window['zoomg-context']) = context;
 
 const ROW_COUNT = 25;
 const COLUMN_COUNT = 120;
