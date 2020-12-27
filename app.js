@@ -6,8 +6,8 @@ const Config = Zoomg.Config;
 const ViewStack = Zoomg.ViewStack;
 const Rectangle = Zoomg.Rectangle;
 
-const scrolly = document.getElementById("scroll");
-svgEle.initialize("#group", "scroll", "#scroll svg");
+const zoomgContainer = document.getElementById("zoomg-container");
+svgEle.initialize("#group", "zoomg-container");
 
 
 const context = new Rectangle("top-context", 0, 0, null, 0, 0);
@@ -38,6 +38,6 @@ for (let i = 0; i < COLUMN_COUNT; i++) {
 }
 
 Config.sayHello();
-ViewStack.reset(scrolly.clientWidth, scrolly.clientHeight, context);
+ViewStack.reset(zoomgContainer.clientWidth, zoomgContainer.clientHeight, context);
 
 window.context = context;
