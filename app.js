@@ -7,7 +7,7 @@ const ViewStack = Zoomg.ViewStack;
 const Rectangle = Zoomg.Rectangle;
 
 const zoomgContainer = document.getElementById("zoomg-container");
-svgEle.initialize("#group", "zoomg-container");
+svgEle.initialize("zoomg-container");
 
 
 const context = new Rectangle("top-context", 0, 0, null, 0, 0);
