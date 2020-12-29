@@ -7,7 +7,8 @@ const ViewStack = Zoomg.ViewStack;
 const Rectangle = Zoomg.Rectangle;
 
 const zoomgContainer = document.getElementById("zoomg-container");
-svgEle.initialize("zoomg-container", () => {
+
+svgEle.initialize("zoomg-container").then( () => {
   const context = new Rectangle("top-context", 0, 0, null, 0, 0);
 
   const ROW_COUNT = 25;
@@ -36,8 +37,9 @@ svgEle.initialize("zoomg-container", () => {
   }
 
   Config.sayHello();
-  console.log(`**** VIEWSTACK RESET`);
   ViewStack.reset(zoomgContainer.clientWidth, zoomgContainer.clientHeight, context);
 
   window.context = context;
+}).catch(err => {
+  console.log(`ERROR occured during the process of initializing Zoomg svg-element.  The erros is:\n${err}`);
 })
