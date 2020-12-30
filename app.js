@@ -8,7 +8,7 @@ const Rectangle = Zoomg.Rectangle;
 
 const zoomgContainer = document.getElementById("zoomg-container");
 
-svgEle.initialize("zoomg-container").then( () => {
+Zoomg.new('zoomg-container').then( () => {
   const context = new Rectangle("top-context", 0, 0, null, 0, 0);
 
   const ROW_COUNT = 25;
